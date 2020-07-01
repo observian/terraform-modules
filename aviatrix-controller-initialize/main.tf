@@ -40,6 +40,16 @@ resource aws_iam_policy lambda-policy {
         "autoscaling:CompleteLifecycleAction"
       ],
       "Resource": "*"
+    
+    },
+    {
+      "Effect":"Allow",
+      "Action":[
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource":"arn:aws:logs:::*"
     }
   ]
 }
